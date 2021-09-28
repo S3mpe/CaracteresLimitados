@@ -1,0 +1,19 @@
+﻿<Window x:Class="CaracteresLimitados.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CaracteresLimitados"
+        mc:Ignorable="d"
+        Title="CaracteresLimitados" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFB23636"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBox x:Name="EntradaTextBox" HorizontalAlignment="Left" Height="305" Margin="37,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="729" TextChanged="EntradaTextBox_TextChanged" AcceptsReturn="True"/>
+        <TextBlock x:Name="CaracteresTextBlock" HorizontalAlignment="Left" Margin="693,356,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Opacity="0.5"/>
+    </Grid>
+</Window>
