@@ -22,25 +22,20 @@ namespace CaracteresLimitados
     {
         public MainWindow()
         {
+         
             InitializeComponent();
+            CaracteresTextBlock.Text = EntradaTextBox.Text.Length + "/140";
         }
 
         private void EntradaTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             int tamaño = EntradaTextBox.Text.Length;
-            try
+            EntradaTextBox.MaxLength = 140;
+            if (tamaño >= 140)
             {
-                EntradaTextBox.MaxLength = 140;
-                if (tamaño >= 140)
-                {
-                    EntradaTextBox.IsReadOnly = true;
-                }
-                CaracteresTextBlock.Text = tamaño + "/140";
+                EntradaTextBox.IsReadOnly = true;
             }
-            catch (Exception excepcion)
-            {
-                Console.WriteLine(excepcion.Message);
-            }
+            CaracteresTextBlock.Text = tamaño + "/140";
         }
     }
 }
